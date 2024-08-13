@@ -17,6 +17,17 @@ class Game {
   }
 
   registerEvents() {
+    this.symbol = document.querySelector(".word");
+    this.symbol.addEventListener('keyup', )
+    // this.currentSymbols = document.querySelectorAll('.symbol');
+    // this.currentSymbols.forEach((this.currentSymbol) => {
+    //   if (this.currentSymbol ===  )
+    // });
+
+    
+
+    
+
     /*
       TODO:
       Написать обработчик события, который откликается
