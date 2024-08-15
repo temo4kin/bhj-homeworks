@@ -5,7 +5,9 @@ tabs.forEach((tab) => {
     // tabsContent.forEach((tabContent) => {
     //   tabContent.classList.toggle('tab__content_active');
     // });
-    tabsContent[tabs.indexOf(tab)].toggle('tab__content_active');
-    tab.classList.toggle('tab_active');
+    let tabIndex = tabs.indexOf(tab);
+    console.log(tab, tabIndex);
+    tabsContent[tabIndex].classList.toggle('tab__content_active');
+    tab.classList.classList.toggle('tab_active');
   });
 });
