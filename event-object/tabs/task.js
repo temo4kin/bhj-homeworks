@@ -1,8 +1,29 @@
-const tabs = document.querySelectorAll('.tab');
-const tabsContent = document.querySelectorAll('.tab__content');
-tabs.forEach((tab, i) => {
+const tabs = [...document.querySelectorAll('.tab')];
+const tabsContent = [...document.querySelectorAll('.tab__content')];
+
+const tabActive = 'tab_active';
+const contentActive = 'tab__content_active';
+
+tabs.forEach((tab, index) => {
   tab.addEventListener('click', () => {
-    tabsContent[i].classList.toggle('tab__content_active');
-    tab.classList.toggle('tab_active');
+    tabs.forEach(tab => tab.classList.remove(tabActive));
+    tabsContent.forEach(content => content.classList.remove(contentActive));
+
+    tab.classList.add(tabActive);
+    tabsContent[index].classList.add(contentActive);
   });
 });
+
+
+
+// tabs.forEach((tab, i) => {
+//   tab.addEventListener('click', () => {
+//       for (let count = 0; count < i; count++) {
+//         tabs[count].classList.remove(tabActive);
+//         tabsContent[count].classList.remove(contentActive);
+//       };
+//     console.log(tab);
+//     tabsContent[i].classList.add(contentActive);
+//     tab.classList.add(tabActive);
+//   });
+// });
