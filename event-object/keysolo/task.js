@@ -16,12 +16,24 @@ class Game {
     this.lossElement.textContent = 0;
   }
 
-  registerEvents() {
-    this.symbol = document.querySelector(".word");
-    this.symbol.addEventListener('keyup', )
-    // this.currentSymbols = document.querySelectorAll('.symbol');
-    // this.currentSymbols.forEach((this.currentSymbol) => {
-    //   if (this.currentSymbol ===  )
+  registerEvents(currentSymbol) {
+    this.wordElement.addEventListener("keydown", (e) => {
+      if (this.e.key === this.currentSymbol.textContent) {
+        this.success();
+      } else {
+        this.fail();
+      }
+    });
+   
+   
+   
+    // this.wordElement.addEventListener("keyup", (e) => {
+    //   if (e.target.classList.contains("symbol")) {
+    //     this.success(e.target.textContent);
+    //   } else {
+    //     this.fail(e.target.textContent);
+    //   };
+      
     // });
 
     /*
