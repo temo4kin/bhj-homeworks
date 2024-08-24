@@ -13,17 +13,3 @@ tabs.forEach((tab, index) => {
     tabsContent[index].classList.add(contentActive);
   });
 });
-
-
-
-// tabs.forEach((tab, i) => {
-//   tab.addEventListener('click', () => {
-//       for (let count = 0; count < i; count++) {
-//         tabs[count].classList.remove(tabActive);
-//         tabsContent[count].classList.remove(contentActive);
-//       };
-//     console.log(tab);
-//     tabsContent[i].classList.add(contentActive);
-//     tab.classList.add(tabActive);
-//   });
-// });
